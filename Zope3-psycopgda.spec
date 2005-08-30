@@ -6,26 +6,26 @@ Version:	1.0.0
 Release:	1
 License:	ZPL 2.1
 Group:		Development/Tools
-Source0:	http://www.zope.org/Products/Zope3-Packages/%{zope_subname}/%{version}/%{zope_subname}-%{version}.tgz
+Source0:	http://www.zope.org/Products/Zope3-Packages/psycopgda/%{version}/%{zope_subname}-%{version}.tgz
 # Source0-md5:	da55609e4612f2c6d431b00dfa57c369
 Patch0:		%{name}-python_2_4_1.patch
 URL:		http://www.zope.org/Products/Zope3-Packages/psycopgda/view
 BuildRequires:	python
-%pyrequires_eq	python-modules
-Requires:	Zope3
 Requires(post,postun):	/usr/sbin/installzope3package
 Requires(post,postun):	rc-scripts
+%pyrequires_eq	python-modules
+Requires:	Zope3
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		zope_libdir /usr/lib/zope3
-%define		zope_pyscriptdir /usr/share/zope3/lib/python
+%define		zope_libdir		/usr/lib/zope3
+%define		zope_pyscriptdir	/usr/share/zope3/lib/python
 
 %description
 PostgreSQL database adapter for Zope 3.
 
 %description -l pl
-Adapter bazy danych PostgreSQL dla Zope 3
+Adapter bazy danych PostgreSQL dla Zope 3.
 
 %prep
 %setup -q -n %{zope_subname}-%{version}
