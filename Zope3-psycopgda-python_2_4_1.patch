@@ -1,0 +1,12 @@
+diff -dur -x '*~' psycopgda-1.0.0.orig/configure psycopgda-1.0.0/configure
+--- psycopgda-1.0.0.orig/configure	2004-11-06 21:48:58.000000000 +0100
++++ psycopgda-1.0.0/configure	2005-08-30 11:01:40.000000000 +0200
+@@ -27,7 +27,7 @@
+ # sys.version) below in "best" to "worst" order, not including the
+ # target version.  Up to six acceptable python versions are allowed.
+ # Do not include the target version number in this list!
+-ACCEPTABLE="2.3.4"
++ACCEPTABLE="2.4.1"
+ 
+ # provide the executable names for all the acceptable versions
+ # (and the target version) below
