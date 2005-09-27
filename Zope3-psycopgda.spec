@@ -15,6 +15,7 @@ Requires(post,postun):	/usr/sbin/installzope3package
 Requires(post,postun):	rc-scripts
 %pyrequires_eq	python-modules
 Requires:	Zope3
+Requires:	python-psycopg
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
