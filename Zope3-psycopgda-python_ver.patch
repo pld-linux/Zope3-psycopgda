@@ -6,7 +6,7 @@ diff -dur -x '*~' psycopgda-1.0.0.orig/configure psycopgda-1.0.0/configure
  # target version.  Up to six acceptable python versions are allowed.
  # Do not include the target version number in this list!
 -ACCEPTABLE="2.3.4"
-+ACCEPTABLE="2.4.1"
++ACCEPTABLE="2.4.1 2.4.2"
  
  # provide the executable names for all the acceptable versions
  # (and the target version) below

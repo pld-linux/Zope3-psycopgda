@@ -8,7 +8,7 @@ License:	ZPL 2.1
 Group:		Development/Tools
 Source0:	http://www.zope.org/Products/Zope3-Packages/psycopgda/%{version}/%{zope_subname}-%{version}.tgz
 # Source0-md5:	da55609e4612f2c6d431b00dfa57c369
-Patch0:		%{name}-python_2_4_1.patch
+Patch0:		%{name}-python_ver.patch
 URL:		http://www.zope.org/Products/Zope3-Packages/psycopgda/view
 BuildRequires:	python
 Requires(post,postun):	/usr/sbin/installzope3package
