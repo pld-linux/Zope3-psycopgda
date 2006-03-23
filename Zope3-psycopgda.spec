@@ -11,6 +11,7 @@ Source0:	http://www.zope.org/Products/Zope3-Packages/psycopgda/%{version}/%{zope
 Patch0:		%{name}-python_ver.patch
 URL:		http://www.zope.org/Products/Zope3-Packages/psycopgda/view
 BuildRequires:	python
+BuildRequires:	rpmbuild(macros) >= 1.268
 Requires(post,postun):	/usr/sbin/installzope3package
 Requires(post,postun):	rc-scripts
 %pyrequires_eq	python-modules
@@ -56,16 +57,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 /usr/sbin/installzope3package %{zope_subname}
-if [ -f /var/lock/subsys/zope3 ]; then
-	/etc/rc.d/init.d/zope3 restart >&2
-fi
+%service -q zope3 restart
 
 %postun
 if [ "$1" = "0" ]; then
 	/usr/sbin/installzope3package -d %{zope_subname}
-	if [ -f /var/lock/subsys/zope3 ]; then
-		/etc/rc.d/init.d/zope3 restart >&2
-	fi
+	%service -q zope3 restart
 fi
 
 %files
