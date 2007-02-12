@@ -1,6 +1,6 @@
 %define		zope_subname	psycopgda
 Summary:	PostgreSQL database adapter for Zope 3
-Summary(pl.UTF-8):   Adapter bazy danych PostgreSQL dla Zope 3
+Summary(pl.UTF-8):	Adapter bazy danych PostgreSQL dla Zope 3
 Name:		Zope3-%{zope_subname}
 Version:	1.0.0
 Release:	1
